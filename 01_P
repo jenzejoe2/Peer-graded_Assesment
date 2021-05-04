@@ -1,0 +1,14 @@
+all:
+	README.md
+
+README.md:
+	@touch README.md
+	@echo '# A boring Guessing Game by Joel Jenzer' >> README.md
+	@echo '## Peer greaded assignement for the Course - The Unix Workbench ##' >> README.md
+	@echo 'This makefile was created: $(shell date +%Y-%m-%d:%H:%M:%S)' >> README.md
+	@echo 'There were $(shell wc -l < guessinggame.sh) lines in guessinggame.sh' >> README.md
+	@echo 'I thought it could make sense to opt for a silent makefile, hope you have not searched for too long :-)' >> README.md
+	@echo 'All the best for your future!'
+
+clean:
+	rm README.md
