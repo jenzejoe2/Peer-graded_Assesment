@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #The Guessing Game by jenzejoe2
 echo "### The Guessing Game by jenzejoe2 ###"
-echo "PLS guess how many files are in the current directory (this shell script excluded): "
+echo "PLS guess how many files are in the current directory (this shell script included): "
 read x
 
 function fun_file_number {
-	local file_number=$(ls -l | wc -l)-2			#the guessing game and the .git repo directory are not part of the deal I guessed.
+	local file_number=$(ls -l | wc -l)-1		# -1 for the exluding the first line
 	echo $file_number
 }
 
